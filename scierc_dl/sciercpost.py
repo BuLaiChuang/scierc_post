@@ -1,4 +1,5 @@
 import requests
+import json
 
 # python的requests库发送form-data参数    da   d
 
@@ -12,4 +13,22 @@ data = {
 
 # 此种方式发送form-data类型参数时，请求时不要headers，且用files参数
 response = requests.request("POST", url, files=data)
-print(response.text)
+
+result_str = response.text
+
+result_json = json.loads(result_str)
+
+print(result_json)
+
+entities_list = result_json['data']['entities']
+
+# 定义一个list
+entity_list = []
+
+for entity in entities_list:
+
+    # entities_list.append(entity[0])
+    print(entity)
+    entity_list.append(entity)
+
+print(entity_list)
