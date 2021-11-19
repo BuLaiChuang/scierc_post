@@ -1,6 +1,6 @@
 import requests
 
-# python的requests库发送form-data参数    da
+# python的requests库发送form-data参数    da   d
 
 url = "http://10.10.12.91:32318/spert"
 
